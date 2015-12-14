@@ -6,14 +6,11 @@
     Tests the Blueprint example app
 """
 import pytest
-
 import blueprintexample
-
 
 @pytest.fixture
 def client():
     return blueprintexample.app.test_client()
-
 
 def test_urls(client):
     r = client.get('/')
